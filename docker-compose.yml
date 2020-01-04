@@ -1,0 +1,19 @@
+version: "3"
+services:
+    minecraft-server:
+        container_name: "minecraft-server"
+        build: minecraft-server
+        ports:
+            - "25565:25565"
+        volumes:
+            - "logs:/usr/local/bin/minecraft/logs"
+            - "world:/usr/local/bin/minecraft/world"
+            - "./config/banned-ips.json:/usr/local/bin/minecraft/banned-ips.json"
+            - "./config/banned-players.json:/usr/local/bin/minecraft/banned-players.json"
+            - "./config/ops.json:/usr/local/bin/minecraft/ops.json"
+            - "./config/server.properties:/usr/local/bin/minecraft/server.properties"
+            - "./config/usercache.json:/usr/local/bin/minecraft/usercache.json"
+            - "./config/whitelist.json:/usr/local/bin/minecraft/whitelist.json"
+volumes:
+    logs:
+    world:

@@ -1,0 +1,3 @@
+[submodule "minecraft-server"]
+	path = minecraft-server
+	url = git@github.com:RobJDavey/minecraft-server.git
